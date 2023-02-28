@@ -85,9 +85,9 @@ public class Laptop {
             for (Laptop elem : laptop) {
                 if (key == "price" && elem.price > Integer.valueOf(filter.get("price"))) {
                     resultLaptop.remove(elem);
-                } else if (key == "ram" && elem.ram > Integer.valueOf(filter.get("ram"))) {
+                } else if (key == "ram" && elem.ram < Integer.valueOf(filter.get("ram"))) {
                     resultLaptop.remove(elem);
-                } else if (key == "ssd" && elem.ssd > Integer.valueOf(filter.get("ssd"))) { 
+                } else if (key == "ssd" && elem.ssd < Integer.valueOf(filter.get("ssd"))) { 
                     resultLaptop.remove(elem);
                 } else if (key == "os" && !elem.os.equals(filter.get("os"))) {
                     resultLaptop.remove(elem);
